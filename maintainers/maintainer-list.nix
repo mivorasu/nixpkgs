@@ -983,7 +983,7 @@
     email = "mail@akru.me";
     github = "akru";
     githubId = 786394;
-    name = "Alexander Krupenkin ";
+    name = "Alexander Krupenkin";
   };
   akshayka = {
     github = "akshayka";
@@ -12511,7 +12511,7 @@
     githubId = 4300747;
   };
   joshvanl = {
-    email = " me@joshvanl.dev ";
+    email = "me@joshvanl.dev";
     github = "JoshVanL";
     githubId = 15893072;
     name = "Josh van Leeuwen";
@@ -25911,7 +25911,7 @@
     email = "admin@snappeh.com";
     github = "tris203";
     githubId = 18444302;
-    name = " Tristan Knight";
+    name = "Tristan Knight";
   };
   trishtzy = {
     github = "trishtzy";
