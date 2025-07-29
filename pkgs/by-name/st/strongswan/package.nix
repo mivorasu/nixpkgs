@@ -201,10 +201,10 @@ stdenv.mkDerivation rec {
 
   passthru.tests = { inherit (nixosTests) strongswan-swanctl; };
 
-  meta = with lib; {
+  meta = {
     description = "OpenSource IPsec-based VPN Solution";
     homepage = "https://www.strongswan.org";
-    license = licenses.gpl2Plus;
-    platforms = platforms.all;
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.all;
   };
 }

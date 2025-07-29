@@ -63,7 +63,7 @@ assert enableQt -> qwt != null;
 
   env.NIX_CFLAGS_COMPILE = "-Wno-unused";
 
-  meta = with lib; {
+  meta = {
     homepage = "https://www.cgsecurity.org/wiki/Main_Page";
     downloadPage = "https://www.cgsecurity.org/wiki/TestDisk_Download";
     description = "Data recovery utilities";
@@ -83,6 +83,6 @@ assert enableQt -> qwt != null;
     '';
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = with maintainers; [ fgaz ];
+    maintainers = with lib.maintainers; [ fgaz ];
   };
 }

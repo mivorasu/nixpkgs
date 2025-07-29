@@ -54,14 +54,14 @@ stdenv.mkDerivation rec {
   NIX_CFLAGS_COMPILE = [ "-fpermissive" ];
   cmakeFlags = [ "-DUSE_RAPIDJSON=ON" ];
 
-  meta = with lib; {
+  meta = {
     description = "Open CASCADE Technology, libraries for 3D modeling and numerical simulation";
     homepage = "https://www.opencascade.org/";
-    license = licenses.lgpl21; # essentially...
+    license = lib.licenses.lgpl21; # essentially...
     # The special exception defined in the file OCCT_LGPL_EXCEPTION.txt
     # are basically about making the license a little less share-alike.
-    maintainers = with maintainers; [ amiloradovsky ];
-    platforms = platforms.all;
+    maintainers = with lib.maintainers; [ amiloradovsky ];
+    platforms = lib.platforms.all;
   };
 
 }

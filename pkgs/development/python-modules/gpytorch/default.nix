@@ -60,10 +60,10 @@ buildPythonPackage rec {
   # Testing is broken on Darwin due to a `scikit-learn` issue, see https://github.com/NixOS/nixpkgs/issues/423831
   doCheck = !stdenv.hostPlatform.isDarwin;
 
-  meta = with lib; {
+  meta = {
     description = "Highly efficient and modular implementation of Gaussian Processes, with GPU acceleration";
     homepage = "https://gpytorch.ai";
-    license = licenses.mit;
-    maintainers = with maintainers; [ veprbl ];
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ veprbl ];
   };
 }

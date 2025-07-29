@@ -363,13 +363,13 @@ stdenv.mkDerivation (finalAttrs: {
     };
   };
 
-  meta = with lib; {
+  meta = {
     description = "Matrix Algebra on GPU and Multicore Architectures";
-    license = licenses.bsd3;
+    license = lib.licenses.bsd3;
     homepage = "https://icl.utk.edu/magma/";
     changelog = "https://github.com/icl-utk-edu/magma/blob/v${version}/ReleaseNotes";
-    platforms = platforms.linux;
-    maintainers = with maintainers; [ connorbaker ];
+    platforms = lib.platforms.linux;
+    maintainers = with lib.maintainers; [ connorbaker ];
 
     # Cf. https://github.com/icl-utk-edu/magma/blob/v2.9.0/CMakeLists.txt#L24-L31
     broken =

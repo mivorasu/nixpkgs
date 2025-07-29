@@ -633,7 +633,7 @@ stdenv.mkDerivation rec {
     nixos-install-grub-uefi-spec = nixosTests.installer.simpleUefiGrubSpecialisation;
   };
 
-  meta = with lib; {
+  meta = {
     description = "GNU GRUB, the Grand Unified Boot Loader";
 
     longDescription = ''
@@ -650,7 +650,7 @@ stdenv.mkDerivation rec {
 
     homepage = "https://www.gnu.org/software/grub/";
 
-    license = licenses.gpl3Plus;
+    license = lib.licenses.gpl3Plus;
 
     platforms =
       if xenSupport then
@@ -659,7 +659,7 @@ stdenv.mkDerivation rec {
           "i686-linux"
         ]
       else
-        platforms.gnu ++ platforms.linux;
+        lib.platforms.gnu ++ lib.platforms.linux;
 
     maintainers = [ ];
 
