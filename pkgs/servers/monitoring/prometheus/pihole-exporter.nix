@@ -17,11 +17,11 @@ buildGoModule rec {
 
   vendorHash = "sha256-/+YHIpaBd9YfmX04CT2ohVpQc6iLFIFLvcIwGtPbc+s=";
 
-  meta = with lib; {
+  meta = {
     description = "Prometheus exporter for PI-Hole's Raspberry PI ad blocker";
     mainProgram = "pihole-exporter";
     homepage = "https://github.com/eko/pihole-exporter";
-    license = licenses.mit;
+    license = lib.licenses.mit;
     maintainers = [ ];
   };
 }
